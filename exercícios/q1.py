@@ -44,12 +44,12 @@ class PacienteUI:
     def main(cls):
         op = 0
         while op != 5:
-            op = PacienteUI.menu()
+            op = cls.menu()
             match op:
-                case 1: PacienteUI.inserir()
-                case 2: PacienteUI.listar()
-                case 3: PacienteUI.alterar()
-                case 4: PacienteUI.recuperar()
+                case 1: cls.inserir()
+                case 2: cls.listar()
+                case 3: cls.alterar()
+                case 4: cls.recuperar()
 
     @classmethod
     def menu(cls):

@@ -36,13 +36,13 @@ class ContatoUI:
     def main(cls):
         op = 0
         while op != 7:
-            op = ContatoUI.menu()
-            if op == 1: ContatoUI.inserir()
-            if op == 2: ContatoUI.listar()
-            if op == 3: ContatoUI.atualizar()
-            if op == 4: ContatoUI.excluir()
-            if op == 5: ContatoUI.pesquisar()
-            if op == 6: ContatoUI.aniversariantes()
+            op = cls.menu()
+            if op == 1: cls.inserir()
+            if op == 2: cls.listar()
+            if op == 3: cls.atualizar()
+            if op == 4: cls.excluir()
+            if op == 5: cls.pesquisar()
+            if op == 6: cls.aniversariantes()
 
     @classmethod
     def menu(cls):

@@ -7,14 +7,14 @@ class Pagamento(enum.Enum):
     Pago = 3
 
 class Boleto:
-    def __init__(self, codB, dataE, dataV, dataP, valorB, valorP, situacaoP):
+    def __init__(self, codB, dataE, dataV, dataP, valorB, valorP):
         self.__codBarras = codB
         self.__dataEmissao = dataE
         self.__dataVencimento = dataV
-        self.__dataPago = dataP
+        self.__dataPago = None
         self.__valorBoleto = valorB
-        self.__valorPago = valorP
-        self.__situacaoPagamento = situacaoP
+        self.__valorPago = 0.0
+        self.__situacaoPagamento = Pagamento.EmAberto
 
     def __str__(self):
         return f"Código de barras: {self.__codBarras}\nData de emissão: {self.__dataEmissao}\nData de vencimento: {self.__dataVencimento}\nData do pagamento: {self.__dataPago}\nValor do boleto: {self.__valorBoleto}\nValor pago: {self.__valorPago}\nSituação do pagamento: {self.__situacaoPagamento}"
