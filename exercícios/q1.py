@@ -28,10 +28,14 @@ class Paciente:
     def get_tel(self):
         return self.__tel
     
-    def Idade(self): #rever!!!!
+    def Idade(self):
         hoje = datetime.today()
         anos = hoje.year - self.__nasc.year
         meses = hoje.month - self.__nasc.month
+        if meses < 0:
+            meses = -meses
+        if anos < 0:
+            anos = -anos
         return f"{anos} anos e {meses} meses" 
     
     def __str__(self):
